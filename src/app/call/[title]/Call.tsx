@@ -17,6 +17,7 @@ import { soda } from "./SODA";
 import { 지구정복 } from "./지구정복";
 import { 자유선언 } from "./자유선언";
 import { 마니또 } from "./마니또";
+import { 플위듀 } from "./플위듀";
 
 const data = {
   discord: {
@@ -62,6 +63,11 @@ const data = {
     bgColor: "#E9A4C7",
     color: "white",
   },
+  etc: {
+    track: ["play we dew", "청춘서약"],
+    bgColor: "#E9A4C7",
+    color: "white",
+  },
 };
 
 const datas: { [key: string]: string[] } = {
@@ -83,18 +89,20 @@ const datas: { [key: string]: string[] } = {
   "안녕, 나의 슬픔": bye,
   달리기: 달리기,
   메아리: 메아리,
-  눈물참기: ["준비중.."],
-  행복해져라: ["준비중.."],
-  "검색어는 QWER": ["준비중.."],
-  OVERDRIVE: ["준비중.."],
-  "D-DAY": ["준비중.."],
-  "Yours sincerely": ["준비중.."],
+  눈물참기: ["준비중..", "", ""],
+  행복해져라: ["준비중..", "", ""],
+  "검색어는 QWER": ["준비중..", "", ""],
+  OVERDRIVE: ["준비중..", "", ""],
+  "D-DAY": ["준비중..", "", ""],
+  "Yours sincerely": ["준비중..", "", ""],
+  "play we dew": 플위듀,
+  청춘서약: ["준비중..", "", ""],
 };
 
 export const Call = ({
   title,
 }: {
-  title: "discord" | "manito" | "mynameishina" | "r";
+  title: "discord" | "manito" | "mynameishina" | "r" | "etc";
 }) => {
   const [selected, setSelected] = useState("");
   const trackList = data[title].track;
