@@ -29,17 +29,6 @@ const Navibar = () => {
       <div className=" text-xl text-center">
         <Link href="/video">영상으로 보기</Link>
       </div>
-      <div className=" text-xl text-center">
-        <Link
-          href="https://docs.google.com/spreadsheets/d/1aHJ5ITDPQ-5Py9gyYRyIcp6iTSvhfa7xiOh28DmXlhk/edit?gid=419099905#gid=419099905"
-          target="_blank"
-        >
-          응원법 제안 / 건의사항
-        </Link>
-      </div>
-      {/* <div className=" text-xl text-center">
-        <Link href="/">건의사항</Link>
-      </div> */}
     </div>
   );
 };
