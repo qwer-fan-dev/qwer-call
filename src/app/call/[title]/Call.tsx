@@ -18,6 +18,7 @@ import { 지구정복 } from "./지구정복";
 import { 자유선언 } from "./자유선언";
 import { 마니또 } from "./마니또";
 import { 플위듀 } from "./플위듀";
+import Link from "next/link";
 
 const data = {
   discord: {
@@ -98,6 +99,13 @@ const datas: { [key: string]: string[] } = {
   "play we dew": 플위듀,
   청춘서약: ["준비중..", "", ""],
 };
+const datas2 = [
+  ["Harmony from Discord", "discord"],
+  ["MANITO", "manito"],
+  ["Algorithm’s Blossom", "mynameishina"],
+  ["난 네 편이야, 온 세상이 불협일지라도", "r"],
+  ["미발매곡", "etc"],
+];
 
 export const Call = ({
   title,
@@ -109,11 +117,26 @@ export const Call = ({
 
   return (
     <div className="w-full h-full flex">
+      <div className="w-40 min-w-40 bg-emerald-600 h-fit">
+        {datas2.map((data) => {
+          return (
+            <Link
+              className={`h-16 flex justify-center items-center ${
+                data[0] === title ? "font-bold" : ""
+              }`}
+              key={data[0]}
+              href={`/call/${data[1]}`}
+            >
+              {data[0]}
+            </Link>
+          );
+        })}
+      </div>
       <div className="w-40 min-w-40 bg-amber-200 h-fit">
         {trackList.map((track) => {
           return (
             <div
-              className={`h-16 flex justify-center items-center ${
+              className={`h-16 flex justify-center items-center cursor-pointer ${
                 track === selected ? "font-bold" : ""
               }`}
               key={track}

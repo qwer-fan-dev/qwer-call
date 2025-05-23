@@ -1,7 +1,7 @@
 import React from "react";
 import { Call } from "./Call";
 
-const titles = ["discord", "manito", "mynameishina", "r"];
+const titles = ["discord", "manito", "mynameishina", "r", "etc"];
 
 // Return a list of `params` to populate the [slug] dynamic segment
 export async function generateStaticParams() {
